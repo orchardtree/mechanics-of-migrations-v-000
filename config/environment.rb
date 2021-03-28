@@ -14,6 +14,7 @@ ActiveRecord::Base.establish_connection(
   :adapter => "sqlite3",
   :database => "db/artists.sqlite"
 )
+
 =begin
 sql = <<-SQL
   CREATE TABLE IF NOT EXISTS artists (
@@ -27,4 +28,5 @@ SQL
 
 ActiveRecord::Base.connection.execute(sql)
 =end
+
 require_relative "../artist.rb"
